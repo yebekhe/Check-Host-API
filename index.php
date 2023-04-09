@@ -24,7 +24,7 @@ if (isset($_GET['host'])){
         $request_id = json_decode($response, true)['request_id'];
       
         // Sleep Until response created
-        sleep(10);
+        sleep(3);
         // Create new url , fetch and decode it's data
         $new_url = "https://check-host.net/check-result/".$request_id;
         $new_response = file_get_contents($new_url);
