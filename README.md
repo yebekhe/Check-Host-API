@@ -6,7 +6,7 @@ This is a simple PHP script that checks the ping time to a specified host using 
 
 To use this script, simply call the PHP file with the host parameter set to the desired host. For example:
 
-https://example.com/ping-checker.php?host=example.com
+https://example.com/index.php?host=google.com
 
 
 ## API endpoint
