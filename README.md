@@ -8,6 +8,8 @@ To use this script, simply call the PHP file with the host parameter set to the 
 
 https://example.com/index.php?host=google.com
 
+If the ping is zero, the domain is filtered, to be sure, you can check the result by refreshing the script
+
 
 ## API endpoint
 
