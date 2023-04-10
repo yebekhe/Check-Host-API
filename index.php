@@ -6,7 +6,7 @@ if (isset($_GET["host"])) {
 
     $request_id = check_host($host);
 
-    sleep(3);
+    sleep(7);
 
     $Pings = check_ping($request_id);
 
