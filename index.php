@@ -5,13 +5,16 @@ if (isset($_GET["host"])) {
     $host = $_GET["host"];
 
     $request_id = check_host($host);
-
-    sleep(2);
+    if(isset($_GET['accuracy'])){
+        accuracy($_GET['accuracy']);
+    }else{
+         accuracy(3);
+    }
 
     $Pings = check_ping($request_id);
 
     echo $Pings;
 } else {
-    echo "Please provide a Host or IP and retry!";
+    exit("Please provide a Host or IP and retry!");
 }
 ?>
