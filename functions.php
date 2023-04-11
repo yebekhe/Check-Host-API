@@ -56,12 +56,15 @@ function check_ping($request_id)
                     $decoded_response["ir1.node.check-host.net"][0]
                     as $value
                 ) {
-                    if ($value[0] == "OK") {
+                    if (@$value[0] == "OK") {
                         $count++;
                         $Tehran_ping += $value[1];
                     }
                 }
-                $Tehran_ping = (@$Tehran_ping / $count) * 1000;
+              if ($count !== 0){
+                 $Tehran_ping = (@$Tehran_ping / $count) * 1000;
+              }
+               
             }
 
             if (!empty($decoded_response["ir3.node.check-host.net"])) {
@@ -70,12 +73,16 @@ function check_ping($request_id)
                     $decoded_response["ir3.node.check-host.net"][0]
                     as $value
                 ) {
-                    if ($value[0] == "OK") {
+                    if (@$value[0] == "OK") {
                         $count++;
                         $Shiraz_ping += $value[1];
                     }
                 }
-                $Shiraz_ping = (@$Shiraz_ping / $count) * 1000;
+              if ($count !== 0){
+                 $Shiraz_ping = (@$Shiraz_ping / $count) * 1000;
+              }
+               
+                
             }
 
             if (!empty($decoded_response["ir4.node.check-host.net"])) {
@@ -84,12 +91,15 @@ function check_ping($request_id)
                     $decoded_response["ir4.node.check-host.net"][0]
                     as $value
                 ) {
-                    if ($value[0] == "OK") {
+                    if (@$value[0] == "OK") {
                         $count++;
                         $Tabriz_ping += $value[1];
                     }
                 }
-                $Tabriz_ping = (@$Tabriz_ping / $count) * 1000;
+              if ($count !== 0){
+                 $Tabriz_ping = (@$Tabriz_ping / $count) * 1000;
+              }
+                
             }
 
             $Pings = [
@@ -106,6 +116,20 @@ function check_ping($request_id)
         curl_close($ch);
     } else {
         return "Request ID not found!";
+    }
+}
+function accuracy($accuracy){
+    if( $accuracy >= 0 and $accuracy <= 10 and is_numeric($accuracy)){
+        sleep($accuracy);
+        return ;
+    }elseif( $accuracy > 10 and is_numeric($accuracy)){
+        sleep(10);
+        return ;
+    }elseif( $accuracy < 0 and is_numeric($accuracy)){
+        sleep(0);
+        return ;
+    }elseif(!is_numeric($accuracy)){
+        exit ("acuuracy should be numeric!");
     }
 }
 ?>
