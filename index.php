@@ -1,4 +1,5 @@
 <?php
+header('Content-type: application/json;');
 include "functions.php";
 
 if (isset($_GET["host"])) {
