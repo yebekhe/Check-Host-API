@@ -121,15 +121,16 @@ function check_ping($request_id)
 function accuracy($accuracy){
     if( $accuracy >= 0 and $accuracy <= 10 and is_numeric($accuracy)){
         sleep($accuracy);
-        return ;
+        
     }elseif( $accuracy > 10 and is_numeric($accuracy)){
         sleep(10);
-        return ;
+        
     }elseif( $accuracy < 0 and is_numeric($accuracy)){
         sleep(0);
-        return ;
+        
     }elseif(!is_numeric($accuracy)){
         exit ("acuuracy should be numeric!");
     }
+    return ;
 }
 ?>
