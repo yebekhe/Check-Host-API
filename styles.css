@@ -1,0 +1,60 @@
+
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #F6F6F6;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: #0072C6;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333333;
+  color: #F6F6F6;
+}
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align:center;
+  }
+  th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align:center;
+  }
