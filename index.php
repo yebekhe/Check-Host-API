@@ -16,6 +16,8 @@ if (isset($_GET["host"])) {
 
     echo $Pings;
 } else {
-    exit("Please provide a Host or IP and retry!");
+     header("Location: README.html");
+    exit();
 }
 ?>
+
