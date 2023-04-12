@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="styles.css" rel="stylesheet">
+   <script src="scripts.js"></script>
+  <title>Ping Checker using Check-Host API</title>
+  <h1 id="title-en">Ping Checker using Check-Host API</h1>
+  <h1 id="title-fa" style="display:none;" dir="rtl">بررسی‌کننده پینگ با استفاده از API وبسایت Check-Host</h1>
+</head>
+<body>
+    
+  <p  id="toggle-en"><button onclick="toggleLanguage()">Persian / فارسی</button></p>
+  <p  id="toggle-fa" style="display:none;"><button onclick="toggleLanguage()">English / انگلیسی</button></p>
+  <p id="description-en">This is a simple PHP script that checks the ping time to a specified host using the Check-Host API. The script fetches the ping data from 3 different nodes (Tehran, Shiraz, and Tabriz) and calculates their average values, converts them to milliseconds, and returns the results as a JSON object.</p>
+  <p id="description-fa" style="display:none;" dir="rtl">این یک اسکریپت PHP ساده است که زمان پینگ برای host مشخص شده را با استفاده از API وبسایت Check-Host بررسی می‌کند. این اسکریپت اطلاعات پینگ را از 3 گره مختلف (تهران، شیراز و تبریز) دریافت کرده، میانگین آنها را محاسبه، به میلی‌ثانیه تبدیل می‌کند و نتایج را به صورت یک شی JSON برمی‌گرداند.</p>
+  <h2 id="usage-en">Usage</h2>
+  <h2 id="usage-fa" style="display:none;" dir="rtl">نحوه استفاده</h2>
+  <p id="usage-info-en">To use this script, simply call the PHP file with the host parameter set to the desired host. For example:</p>
+  <p id="usage-info-fa" style="display:none;" dir="rtl">برای استفاده از این اسکریپت، با فراخوانی فایل PHP با پارامتر host، می‌توانید از آن استفاده کنید. به‌عنوان مثال:</p>
+  <a href="https://vowrss-8080.csb.app/?host=google.com&amp;accuracy=5"><pre>https://vowrss-8080.csb.app/?host=google.com&amp;accuracy=5</pre></a>
+  <div class="container">
+  <table id="table-en" >
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>host</td>
+      <td>IP or website address</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>accuracy</td>
+      <td>Adjust accuracy of response</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+<table id="table-fa" style="display:none;" dir="rtl">
+  <thead>
+    <tr>
+      <th>پارامتر</th>
+      <th>توضیحات</th>
+      <th>الزامیست؟</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>host</td>
+      <td>آدرس IP یا وب سایت</td>
+      <td>بله</td>
+    </tr>
+    <tr>
+       <td>accuracy</td>
+       <td>تنظیم دقت پاسخ</td>
+       <td>خیر</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  <p id="filter-message-en">If the ping is zero, the domain is filtered, to be sure, you can check the result by refreshing the script</p>
+  <p id="filter-message-fa" style="display:none;" dir="rtl">اگر پینگ برابر با صفر باشد، میزبان فیلتر شده است. برای اطمینان، می‌توانید با بازنشانی اسکریپت نتیجه را بررسی کنید.</p>
+  
+  <footer>
+  <p id="footer-message-en" ><b>Follow me on <a href="https://www.twitter.com/YeBeKhe">Twitter</a>!</b></p>
+  <p id="footer-message-fa" style="display:none; " dir="rtl"><b>حتما <a href="https://www.twitter.com/YeBeKhe">توییترم</a> رو دنبال کن!</b></p>
+</footer>
+</body>
+</html>
